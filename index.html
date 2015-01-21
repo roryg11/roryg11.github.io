@@ -1,1 +1,88 @@
-<h1>YO MOMO</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TWEENIFY</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="paper.js"></script>
+  <script type="text/paperscript" canvas="canvas">
+    // we want to start a path that renders a series of segments(will eventually turn into triangles)
+    // the segments have a random angle and random length(might just scale a bit)
+    // segments start as white and fade to gray
+    var triangles = [];
+    var numTriangles = 50;
+    var randomColorNumber;
+    var newTriangle;
+
+    function randomNumberGenerator(){
+      randomNumber = Math.floor(Math.random()* 100);
+    }
+
+    function randomColorNumGenerator(){
+      colorArray = []
+      for(var i = 0; i < 6; i++){
+        randomColorNumber = Math.floor(Math.random()*15)
+        if(randomColorNumber === 10){
+          colorArray.push('A');
+        }
+        else if(randomColorNumber === 11){
+          colorArray.push('B');
+        }
+        else if(randomColorNumber === 12){
+          colorArray.push('C');
+        }
+        else if(randomColorNumber === 13){
+          colorArray.push('D');
+        }
+        else if(randomColorNumber === 14){
+          colorArray.push('E');
+        }
+        else if(randomColorNumber === 15){
+          colorArray.push('F');
+        }
+        else{colorArray.push(randomColorNumber)}
+      }
+      randomColorNumber = '#'+ colorArray.join("");
+    }
+
+    for(var i =0; i < 60; i++){
+      randomNumberGenerator();
+      randomColorNumGenerator();
+      randomPoint = new Point(900, 900) * Point.random();
+      newTriangle = new Path.RegularPolygon(randomPoint, 3, randomNumber);
+      newTriangle.strokeColor = randomColorNumber;
+      newTriangle.strokeWidth = 5;
+      triangles.push(newTriangle);
+      pathExists = true;
+    }
+
+    function onFrame(event){
+      for(var i =0; i< triangles.length; i++){
+        if(i % 2 === 0){
+          triangles[i].strokeColor.hue += 1;
+          triangles[i].rotate(1);
+          triangles[i].position.x += triangles[i].bounds.width/40;
+          if(triangles[i].bounds.left > view.size.width ){
+            triangles[i].position.x = -triangles[i].bounds.width;
+          }
+        }
+        else{
+          triangles[i].strokeColor.hue += 4;
+          triangles[i].rotate(2);
+          triangles[i].position.x += triangles[i].bounds.width/40;
+          if(triangles[i].bounds.left > view.size.width ){
+            triangles[i].position.x = -triangles[i].bounds.width;
+          }
+        }
+
+      }
+    }
+
+  </script>
+</head>
+<body>
+  <div id="window">
+    <canvas id="canvas" height="300" width= "500" resize hidpi="off" style="background:black"></canvas>
+  </div>
+</body>
+</html>
