@@ -7,12 +7,16 @@
 body {
 	font-family: 'Lato', sans-serif;
 	background: #466368;
-  background: radial-gradient(#00CC99, #293f50);
+  background: radial-gradient(#80e6cc, #6A998D);
 }
 
 h1, h2, h3, h4, h5 {
 	font-family: 'Lato', sans-serif;
 	font-weight: 100;
+}
+
+p {
+	color: rgba(30, 72, 90, .9);
 }
 /* General grid styles */
 .grid {
@@ -27,7 +31,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .jumbotron {
-	background-color: rgba(20, 20, 20, .3);
+	background-color: rgba(30, 72, 90, .3);
   width: 100%;
 	height: auto;
   font-family: 'Lato', sans-serif;
@@ -78,29 +82,13 @@ h1, h2, h3, h4, h5 {
 
 /* grid item */
 
-/*.grid #puppy-play-date {
-	background: url(images/PuppyPlaydateco_BW.jpg) no-repeat center center;
-	opacity: .5;
-}
-
-.grid #march-madness {
-	background: url(images/EmptyCourt_BW.jpg) no-repeat center center;
-	opacity: .5;
-}
-
-.grid #fellow-tracker {
-	background: url(images/FellowTrackerPenNotebook_BW.jpg) no-repeat center center;
-	opacity: .5;
-
-}*/
-
 .grid li {
 	width: 33%;
 	float: left;
 	height: 200px;
 	text-align: center;
 	border-top: 1px solid #FFFFFF;
-	background-color: rgba(20, 20, 20, .3)
+	background-color: rgba(30, 72, 90, .3);
 }
 
 /* we are using a combination of borders and box shadows to control the grid lines */
@@ -199,7 +187,7 @@ h1, h2, h3, h4, h5 {
 /* Hover styles */
 
 .grid li > a:hover {
-	background: #292929;
+	background: rgba(30, 72, 90, .9);
 	opacity: .8;
 }
 
@@ -250,7 +238,7 @@ h1, h2, h3, h4, h5 {
 .project-container a {
 	text-align:center;
 	text-decoration: none;
-	color: #FFFF66;
+	color: #00726f;
 	display: block;
 	margin-top: 25px;
 	margin-bottom: 10px;
@@ -271,8 +259,24 @@ h1, h2, h3, h4, h5 {
 	margin: 5px;
 	width: 90%;
 	float: left;
-	color: #e6e6e6;
-	background-color: rgba(20, 20, 20, .4);
+	color: rgba(240, 240, 240, .9);
+	background-color: rgba(30, 72, 90, .3);
+}
+
+.content h2 {
+	margin-top: 0;
+	color: #ffff99;
+}
+
+.project-container .project-header {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	text-align: center;
+	height: auto;
+	width: 100%;
+	background-color: rgba(30, 72, 90, .3);
 }
 
 .project-container h1 {
@@ -280,7 +284,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .project-header p {
-	color: #292929;
+	color: rgba(30, 72, 90, 1);
 }
 
 .project-container img {
@@ -288,16 +292,6 @@ h1, h2, h3, h4, h5 {
 	height: auto;
 }
 
-.project-container .project-header {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	margin-top: 10px;
-	text-align: center;
-	height: auto;
-	width: 100%;
-	background-color: rgba(20, 20, 20, .3);
-	border-bottom : 2px solid rgba(100, 100, 100, .4);
-}
 
 @media screen and (max-width: 62.75em) {
 	.grid li {

@@ -38,7 +38,7 @@ $(document).ready(function(){
     if($('.project-container')){
       $('.project-container').remove();
     }
-    var source = $('#project-template').html();
+    var source = $('#puppy-playdate-template').html();
     var template = Handlebars.compile(source);
 
     var context = {
@@ -48,11 +48,17 @@ $(document).ready(function(){
       githubLink: "https://github.com/uncollege",
       backEnd: "Back-End: Rails, Rspec Testing, Postgresql",
       process: "Process: Built using Test Driven Development, Pairing",
-      architecture: "Relational data structure, but we used single table inheritance to differentiate between types of users.",
-      architectureImg: "images/architecture.jpg",
-      featureOne: "Progress Tracking",
-      featureOneDescription: "Staff and Coaches can view Fellow's weekly and aggregate progress throughout the program. This also enabled us to create a feature in which staff could track the progress of each cohort as well as the effectiveness of their coaches.",
-      featureOneImg: "images/messaging_2.png",
+      architecture: "Relational data structure, but we used single table inheritance to differentiate between types of users and the scope of the site they were able to see.",
+      architectureImg: "images/FT_architecture.png",
+      featureOne: "Tracking Coach Success",
+      featureOneDescription: "Staff can follow the progress of coaches through their fellows and see an overall success metric.",
+      featureOneImg: "images/FT_Coach_Tracker.png",
+      featureTwo: "Program Tracking",
+      featureTwoDescription: "Staff and Coaches can view progress of the program at large, including the fellows, the cohorts and the coaches",
+      featureTwoImg: "images/FT_Aggregate_progress.png",
+      featureThree: "Fellow Progress Tracking",
+      featureThreeDescription: "Staff and Coaches can view Fellow's weekly and aggregate progress throughout the program. This also enabled us to create a feature in which staff could track the progress of each cohort as well as the effectiveness of their coaches.",
+      featureThreeImg: "images/FT_Fellow_Goals_Coach.png",
     }
     var html = template(context);
     $('body').append(html);
@@ -62,7 +68,7 @@ $(document).ready(function(){
     if($('.project-container')){
       $('.project-container').remove();
     }
-    var source = $('#project-template').html();
+    var source = $('#puppy-playdate-template').html();
     var template = Handlebars.compile(source);
 
     var context = {
@@ -73,13 +79,16 @@ $(document).ready(function(){
       backEnd: "Back-End: Rails, ESPN webscraper",
       frontEnd: "Front-End: Ember.js, AJAX, jQuery",
       architecture: "Using a relational database for teams scraped from ESPN as well as all of their stats",
-      architectureImg: "images/architecture.jpg",
+      architectureImg: "images/Bracket_Architecture.png",
       featureOne: "Data Display",
       featureOneDescription: "Using the outlet features in Ember, we scraped the data to display it side-by-side for bracket comparison",
-      featureOneImg: "images/messaging_2.png",
-      featureOne: "Bracket Creation",
-      featureOneDescription: "Using jQuery, the teams became click-able so that you could select your bracket and save it",
-      featureOneImg: "images/messaging_2.png",
+      featureOneImg: "images/bracketology_full_team_comparison.png",
+      featureTwo: "Bracket Creation",
+      featureTwoDescription: "Using jQuery, the teams became click-able so that you could select your bracket and save it",
+      featureTwoImg: "images/bracketology_bracket.png",
+      featureThree: "Rankings",
+      featureThreeDescription: "Scraped Teams so that the rankings in each statistical category were visible.",
+      featureThreeImg: "images/bracketology_rankings.png",
     }
     var html = template(context);
     $('body').append(html);
