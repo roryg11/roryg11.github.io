@@ -12,7 +12,7 @@ $(document).ready(function(){
     var context = {
       projectTitle: "PuppyPlayDate.co",
       description: "The canine companion matching app to find compatible puppy pals in your area",
-      siteLink: "www.PuppyPlayDate.co",
+      siteLink: "http://www.PuppyPlayDate.co",
       githubLink: "https://github.com/roryg11/dog_play_date_V2",
       frontEnd: "Front-End: Vanilla Javascript, Handlebars, jQuery, AJAX, WebSockets",
       backEnd: "Back-End: Rails, Custom Web Scraping API, Rspec Testing, Postgresql",
@@ -74,8 +74,8 @@ $(document).ready(function(){
     var context = {
       projectTitle: "Bracketology",
       description: "A Statistics Comparison Application",
-      siteLink: "uncollege-staging.herokuapp.com",
-      githubLink: "https://github.com/uncollege",
+      siteLink: "http://vast-caverns-9415.herokuapp.com/teams",
+      githubLink: "https://github.com/bracketology-1",
       backEnd: "Back-End: Rails, ESPN webscraper",
       frontEnd: "Front-End: Ember.js, AJAX, jQuery",
       architecture: "Using a relational database for teams scraped from ESPN as well as all of their stats",
