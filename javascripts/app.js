@@ -49,7 +49,7 @@ $(document).ready(function(){
       backEnd: "Back-End: Rails, Rspec Testing, Postgresql",
       process: "Process: Built using Test Driven Development, Pairing",
       architecture: "Relational data structure, but we used single table inheritance to differentiate between types of users and the scope of the site they were able to see.",
-      architectureImg: "images/FT_architecture.png",
+      architectureImg: "images/FT_Architecture.png",
       featureOne: "Tracking Coach Success",
       featureOneDescription: "Staff can follow the progress of coaches through their fellows and see an overall success metric.",
       featureOneImg: "images/FT_Coach_Tracker.png",
